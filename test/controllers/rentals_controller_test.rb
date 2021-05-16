@@ -8,8 +8,7 @@ class RentalsControllerTest < ActionDispatch::IntegrationTest
 
     # Check the response is structured as expected.
     assert data.length == 2  # 2 fixtures
-    assert data[0]['attributes'].keys == ['title', 'owner', 'city', 'category', 'bedrooms', 'image', 'description', 'location']
-    assert data[0]['attributes']['location'].keys == ['lat', 'lng']
+    assert data[0]['attributes'].keys == ['title', 'owner', 'city', 'category', 'bedrooms', 'image', 'description', 'lat', 'lng']
   end
 
   test 'get single rental' do
@@ -18,8 +17,7 @@ class RentalsControllerTest < ActionDispatch::IntegrationTest
     data = JSON.parse(@response.body)['data']
 
     # Check the response is structured as expected.
-    assert data['attributes'].keys == ['title', 'owner', 'city', 'category', 'bedrooms', 'image', 'description', 'location']
-    assert data['attributes']['location'].keys == ['lat', 'lng']
+    assert data['attributes'].keys == ['title', 'owner', 'city', 'category', 'bedrooms', 'image', 'description', 'lat', 'lng']
     
     # Check that non-existent slugs 404.
     get '/rentals/non-existent'
