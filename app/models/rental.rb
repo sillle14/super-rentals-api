@@ -7,6 +7,7 @@ class Rental < ApplicationRecord
   end
 
   def slugify
+    # TODO: Check the slug is unique and add a digit until it is.
     self.slug = self.title.parameterize
   end
 end
