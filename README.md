@@ -1,24 +1,9 @@
-# README
+# super-rentals-api
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A backend for [my implementation](https://github.com/sillle14/super-rentals) of the Ember.js tutorial application.
+This uses [JSON:API Resources](https://jsonapi-resources.com/) to create JSON API compliant endpoints for managing 
+rental objects.
 
-Things you may want to cover:
+## Mock Authentication
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To facilitate a proof of concept authetication layer on the front end, this app also supplies a mock authentication endpoint.
